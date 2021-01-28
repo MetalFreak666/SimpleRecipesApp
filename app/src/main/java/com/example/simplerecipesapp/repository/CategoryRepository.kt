@@ -1,6 +1,7 @@
-package com.example.simplerecipesapp
+package com.example.simplerecipesapp.repository
 
 import androidx.annotation.WorkerThread
+import com.example.simplerecipesapp.dao.CategoryDAO
 import com.example.simplerecipesapp.model.RecipesCategory
 import kotlinx.coroutines.flow.Flow
 

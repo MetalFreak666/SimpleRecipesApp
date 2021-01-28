@@ -1,10 +1,11 @@
-package com.example.simplerecipesapp
+package com.example.simplerecipesapp.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.simplerecipesapp.dao.CategoryDAO
 import com.example.simplerecipesapp.model.RecipesCategory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -42,7 +43,7 @@ abstract class CategoryRoomDB: RoomDatabase() {
         private var INSTANCE: CategoryRoomDB? = null
 
         fun getDatabase(context: Context, scope: CoroutineScope): CategoryRoomDB {
-            return INSTANCE?: synchronized(this) {
+            return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     CategoryRoomDB::class.java,

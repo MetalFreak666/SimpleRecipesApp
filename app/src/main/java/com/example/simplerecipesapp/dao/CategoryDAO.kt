@@ -1,4 +1,4 @@
-package com.example.simplerecipesapp
+package com.example.simplerecipesapp.dao
 
 import androidx.room.Dao
 import androidx.room.Insert

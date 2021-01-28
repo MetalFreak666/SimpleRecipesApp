@@ -4,11 +4,12 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.simplerecipesapp.ui.adapters.RecipesCategoryAdapter
+import com.example.simplerecipesapp.viewmodel.CategoryViewModel
+import com.example.simplerecipesapp.viewmodel.CategoryViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 

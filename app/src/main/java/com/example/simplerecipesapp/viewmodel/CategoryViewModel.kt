@@ -1,7 +1,8 @@
-package com.example.simplerecipesapp
+package com.example.simplerecipesapp.viewmodel
 
 import androidx.lifecycle.*
 import com.example.simplerecipesapp.model.RecipesCategory
+import com.example.simplerecipesapp.repository.CategoryRepository
 import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 

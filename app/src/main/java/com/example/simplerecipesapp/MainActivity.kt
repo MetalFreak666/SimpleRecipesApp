@@ -1,5 +1,7 @@
 package com.example.simplerecipesapp
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -9,6 +11,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.simplerecipesapp.ui.adapters.RecipesCategoryAdapter
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        fun newIntent(context: Context): Intent {
+            return Intent(context, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+        }
+    }
 
     private val categoryViewModel: CategoryViewModel by viewModels {
         CategoryViewModelFactory((application as SimpleRecipesApp).repository)

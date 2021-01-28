@@ -17,7 +17,7 @@ class SplashScreenActivity: AppCompatActivity() {
 
         activityScope.launch {
             delay(3000)
-            ContextCompat.startActivity(this@SplashScreenActivity, MainActivity.newIntent(this@SplashScreenActivity), null)
+            ContextCompat.startActivity(this@SplashScreenActivity, StartMenuActivity.newIntent(this@SplashScreenActivity), null)
             finish()
         }
     }
